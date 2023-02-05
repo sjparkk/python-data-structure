@@ -28,6 +28,14 @@ class LinkedList(object):
             self.tail = self.tail.next
         """
 
+    # O(n)
+    def get(self, idx):
+        current = self.head
+        for _ in range(idx):
+            current = current.next
+        return current.value
+
+
 
 class Node :
     def __init__(self, value = 0, next = None):
